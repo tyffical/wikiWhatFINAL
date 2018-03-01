@@ -17,20 +17,16 @@ public class FourthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fourth);
         final Intent intent = getIntent();
         score = intent.getIntExtra("score", 0);
+        scoreText = (TextView) findViewById(R.id.scoretext);
+        switch (score) {
+            case 0: scoreText.setText(getString(R.string.scorezero)); break;
+            case 1: scoreText.setText(getString(R.string.scoreone)); break;
+            case 2: scoreText.setText(getString(R.string.scoretwo)); break;
+            case 3: scoreText.setText(getString(R.string.scorethree)); break;
+            case 4: scoreText.setText(getString(R.string.scorefour)); break;
+            case 5: scoreText.setText(getString(R.string.scorefive)); break;
+        }
         scoreNum = (TextView) findViewById(R.id.scorenumber);
         scoreNum.setText(String.valueOf(score));
-        scoreText = (TextView) findViewById(R.id.scoretext);
-        showScoreMessage();
-    }
-
-    public void showScoreMessage(){
-        switch(score){
-            case 0: scoreText.setText(getString(R.string.scorezero));
-            case 1: scoreText.setText(getString(R.string.scoreone));
-            case 2: scoreText.setText(getString(R.string.scoretwo));
-            case 3: scoreText.setText(getString(R.string.scorethree));
-            case 4: scoreText.setText(getString(R.string.scorefour));
-            case 5: scoreText.setText(getString(R.string.scorefive));
-        }
     }
 }
