@@ -11,10 +11,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class ThirdActivity extends AppCompatActivity {
-    private Button a1,a2,a3,a4;
-    private ImageView q;
-    private int c = 0; //keeps track of current question
-    private int d = 0;
+    private Button a1,a2,a3,a4; //the answer buttons
+    private ImageView q; //the image frame
+    private int c = 0; //keeps track of answers that correspond with the question
+    private int d = 0; //keeps track of current question/image
+    private int score = 0; //number of questions answered correctly
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,8 +132,10 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (intent.getStringExtra("level").equals("easy")) {
-                    if (c == 12)
+                    if (c == 12) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -145,11 +148,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(eq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("medium")) {
-                    if (c == 12)
+                    if (c == 12) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -161,11 +166,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(mq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("hard")) {
-                    if (c == 4 || c == 16)
+                    if (c == 4 || c == 16){
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -178,7 +185,7 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(hq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 }
             }
@@ -187,8 +194,10 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (intent.getStringExtra("level").equals("easy")) {
-                    if (c == 8)
+                    if (c == 8) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -201,11 +210,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(eq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("medium")) {
-                    if (c == 0 || c ==4)
+                    if (c == 0 || c == 4){
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -218,11 +229,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(mq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("hard")) {
-                    if (c == 0)
+                    if (c == 0) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -235,7 +248,7 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(hq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 }
             }
@@ -244,8 +257,10 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (intent.getStringExtra("level").equals("easy")) {
-                    if (c == 4 || c == 16)
+                    if (c == 4 || c == 16){
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -258,11 +273,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(eq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("medium")) {
-                    if (c == 16)
+                    if (c == 16) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -275,11 +292,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(mq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("hard")) {
-                    if (c == 12)
+                    if (c == 12){
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -292,7 +311,7 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(hq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 }
             }
@@ -301,8 +320,10 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (intent.getStringExtra("level").equals("easy")) {
-                    if (c == 0)
+                    if (c == 0) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -315,11 +336,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(eq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("medium")) {
-                    if (c == 8)
+                    if (c == 8) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -332,11 +355,13 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(mq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 } else if (intent.getStringExtra("level").equals("hard")) {
-                    if (c == 8)
+                    if (c == 8) {
                         Toast.makeText(ThirdActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
+                        score++;
+                    }
                     else
                         Toast.makeText(ThirdActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
                     c += 4;
@@ -349,14 +374,15 @@ public class ThirdActivity extends AppCompatActivity {
                         q.setImageResource(hq[d]);
                     }
                     else {
-                        goToFourthActivity();
+                        goToFourthActivity(score);
                     }
                 }
             }
         });
     }
-    private void goToFourthActivity(){
+    private void goToFourthActivity(int s){
         Intent z = new Intent(this, FourthActivity.class);
+        z.putExtra("score", s);
         startActivity(z);
     }
 }

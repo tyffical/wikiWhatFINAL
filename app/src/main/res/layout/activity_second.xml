@@ -1,56 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingStart="38dp"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@color/wikiHowGreen"
     tools:context="com.example.tiffany.wikiwhat.SecondActivity">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/page2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/second_page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.264" />
+        android:fontFamily="casual"
+        android:text="CHOOSE A LEVEL"
+        android:textSize="38sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/easy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@color/lightGreen"
         android:text="Easy"
-        app:layout_constraintBottom_toTopOf="@+id/medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/medium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:text="Medium"
-        app:layout_constraintBottom_toTopOf="@+id/hard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:background="@color/medGreen"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_weight="1" />
+
 
     <Button
         android:id="@+id/hard"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_marginBottom="108dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@color/darkGreen"
         android:text="Hard"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="416dp" />
 
-</android.support.constraint.ConstraintLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

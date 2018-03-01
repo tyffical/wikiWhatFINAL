@@ -62,4 +62,11 @@
     <string name="hq5a2">How to Commit a Crime</string>
     <string name="hq5a3">How to Be An Actress in an Action Movie</string>
     <string name="hq5a4">How to Practice Gun Safety</string>
+    <string name="end">Game Over!</string>
+    <string name="scorezero">1st place in an alternate universe!</string>
+    <string name="scoreone">At least you got one!</string>
+    <string name="scoretwo">There\'s always next time…</string>
+    <string name="scorethree">Decently good, I guess…</string>
+    <string name="scorefour">Why couldn\'t you get one more?</string>
+    <string name="scorefive">Way to go! :)</string>
 </resources>

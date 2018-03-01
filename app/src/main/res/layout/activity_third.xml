@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/wikiHowGreen"
     tools:context="com.example.tiffany.wikiwhat.ThirdActivity">
 
     <ImageView
         android:id="@+id/e1"
-        android:layout_width="167dp"
-        android:layout_height="160dp"
+        android:layout_width="262dp"
+        android:layout_height="206dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/answer1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="visible"
         app:srcCompat="@drawable/eq1" />
 
     <Button
